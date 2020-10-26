@@ -1,12 +1,14 @@
 /*Ray's super simple telescope OTA cover for indi
   Parts:
   Ardunio nano     -- Or pretty much any Arduino or even a wifi module(still needs power)
-  Airplane servo   -- I used a metal 20kg one from amazon.
-  Some stiff plastic sheeting, old coffee can lids etc. --to make the hat.
-  something to make the cherry picker arm that holds it.
-  Some massive wire ties, or other attachment device,
-  or a permanant servo mount screwed to an adjustable dew cap
-  Very likely hope and some Ductape.
+  Airplane servo   -- I used a metal 20kg one from amazon initially but had to swap to a lighter standard 
+  rc-plane one I had onhand due to power issues with the big one when it jogged into place to match pwm demand. 
+  Some stiff plastic sheeting, old coffee can lids etc. --to make the hat. I used aluminum flashing cut round.
+  something to make the cherry picker arm that holds it. I used a scrap of metal similar to what an umbrella might have.
+  Some massive wire ties, or other attachment device --I used two 6 inch hoseclamps from a dryer vent kit, 
+  bent one to fit the servo then secured it with foil tape.
+  or a permanant servo mount screwed to an adjustable dew cap --this was a nuisance.
+  Very likely hope and some Ductape. --that metal foil tape is nice and sticky.
 
 */
 
@@ -14,7 +16,7 @@
 
 Servo servo;  // create servo object to control a servo
 int pos;
-int max = 120;
+int max = 120; //angle when open or closed, these might need to be reversed depending on application.
 int min = 0;
 
 //serial protocol variables
@@ -107,5 +109,6 @@ void setup() {
 }
 
 void loop() {
+//there's nothing here because it runs from that interupt whenever a serial call is made.
 
 }
