@@ -1,4 +1,6 @@
-Ray's super simple telescope OTA cover for indi
+                                 -=Ray's super simple telescope OTA cover for indi=-
+  
+
   Parts:
   Ardunio nano     -- Or pretty much any Arduino or even a wifi module(still needs power)
   Airplane servo   -- I used a metal 20kg one from amazon initially but had to swap to a lighter standard 
