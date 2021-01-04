@@ -13,9 +13,9 @@
   Very likely hope and some Ductape. --that metal foil tape is nice and sticky.
 
 
-
-
-commandlist found online:
+This sketch works with the indi_flipflat Indilib driver. Only the *open* and *close* are working, and it's apparently buggy as yet.
+OTher commands may return info or placeholders.
+serial commandlist for flip flatfound online:
 
 A find all Alnitak devices and the COM ports they are associated with
 C close (works with Flip-Flat only)
