@@ -26,13 +26,13 @@ char line[MAXCOMMAND];
 int eoc = 0;
 int idx = 0;
 
+
 //Begin Called Functions (putting them here makes arduino IDE sort out header files for you)
 void moveToMax() {
   for (pos = min; pos <= max ; pos += 1) { // goes from 0 degrees to 180 degrees in steps of 1 degree
     servo.write(pos);                // tell servo to go to position in variable 'pos'
     delay(15);                        // this slows down the servo so the cap isn't swatting meteors
   }
-Serial.print ("open");
 }
 void moveToMin() {
   for (pos = max; pos >= min ; pos -= 1) { // goes from 180 degrees to 0 degrees
@@ -40,7 +40,6 @@ void moveToMin() {
     servo.write(pos);              // tell servo to go to position in variable 'pos'
     delay(15);                       // this slows down the servo so the cap isn't swatting flies
   }
-Serial.print ("close");
 }
 
 long hexstr2long(char *line) {
@@ -49,7 +48,7 @@ long hexstr2long(char *line) {
   return (ret);
 }
 
-void serialEvent() { //serialEvent is called automatically any time serial data is recieved.
+void doSerialCmd() {
   // read the command until the terminating # character
   while (Serial.available() && !eoc) {
     inChar = Serial.read();
@@ -83,9 +82,11 @@ if (eoc) {
   eoc = 0;
   idx = 0;
 
+
   // Open
   if (!strcasecmp(cmd, "O")||!strcasecmp(cmd, "o")) {
     moveToMax();  
+    
     }
 
   // Close
@@ -95,10 +96,13 @@ if (eoc) {
 
   // get firmware version (handshaking?)
   if (!strcasecmp(cmd, "F")||!strcasecmp(cmd, "f")) {
+      
     }
+
 
 }
 } // end loop
+
 
 void setup() {
   Serial.begin(9600);
@@ -107,5 +111,7 @@ void setup() {
 }
 
 void loop() {
+doSerialCmd();
+
 
 }
