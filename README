@@ -1,3 +1,9 @@
+
+
+**NOTE!: THE current PROTOCOL DOESN'T WORK with indi, AND THE SERVO NEEDS TOO MUCH POWER AT STARTUP.**
+I'm working on a new stepper motoro setup that will be compatible with current indi drivers.
+
+
                                  -=Ray's super simple telescope OTA cover for indi=-
   
 
@@ -14,17 +20,4 @@
 
 This sketch works with the indi_flipflat Indilib driver. Only the *open* and *close* are working, and it's apparently buggy as yet.
 OTher commands may return info or placeholders.
-serial commandlist for flip flatfound online:
-
-A find all Alnitak devices and the COM ports they are associated with
-C close (works with Flip-Flat only)
-O open (works with Flip-Flat only)
-L turn on light
-D turn off light
-Bxxx set brightness. Can be a 1,2, or 3 digit number between 0-255
-G get brightness from device
-V get AACmd.exe version number
-F get device firmware version number
-
-
-New: Fixed a speed control issue.
+//////placeholder////
