@@ -1,6 +1,9 @@
+I have the protocol working now and am working on a stepper version, 
+but due to guthub's new owners being a bunch of ...[CENSORED] I will be uploading to 
+https://codeberg.org/blueshawk/Rays-Handi-cap/ instead.
 
 
-**NOTE!: THE current PROTOCOL DOESN'T WORK with indi, AND THE SERVO NEEDS TOO MUCH POWER AT STARTUP.**
+**NOTE!: THE current PROTOCOL DOESN'T WORK with indi,[turns out it was derived form a command list rather than protocol AND THE SERVO NEEDS TOO MUCH POWER AT STARTUP.**
 I'm working on a new stepper motoro setup that will be compatible with current indi drivers.
 
 
